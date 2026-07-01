@@ -1,11 +1,76 @@
 
-                <html>
-                    <head>
-                        <title>Levi Thanks You</title>
-                    </head>
-                    <body>
-                        <div>
-                        Thank you <%= contact.firstName %> <%= contact.lastName %>.
-                        </div>
-                    </body>
-                </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Levi Runfola</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #11111b 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .icon {
+            font-size: 3rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #f1f1f1;
+        }
+        p {
+            color: #b3b3b3;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #00adb5;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #007a80;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon">✓</div>
+        <h1>Thanks Received!</h1>
+        <p>
+            Thank you, <strong><%= contact.firstName %> <%= contact.lastName %></strong>. 
+        </p>
+        <a href="/" class="btn">Back to Portfolio</a>
+    </div>
+
+</body>
+</html>

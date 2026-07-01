@@ -1,21 +1,110 @@
-    <html>
-                    <head>
-                        <title>Contact Levi</title>
-                    </head>
-                    <body>
-                        <div>
-                        <form action="/thanks" method="POST">
-                            <label for="firstName">First Name:</label>
-                            <input id="firstName" name="firstName" type="text">
-                    
-                            <label for="lastName">Last Name:</label>
-                            <input id="lastName" name="lastName" type="text">
-                    
-                            <label for="email">Email:</label>
-                            <input id="email" name="email" type="text">
-                    
-                            <input type="submit" />
-                        </form>
-                        </div>
-                    </body>
-                </html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Levi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #11111b 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .form-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 16px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #f1f1f1;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #b3b3b3;
+            font-weight: 500;
+        }
+        input[type="text"] {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00adb5;
+            box-shadow: 0 0 8px rgba(0, 173, 181, 0.4);
+        }
+        input[type="submit"] {
+            background: #00adb5;
+            color: #fff;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+        input[type="submit"]:hover {
+            background: #007a80;
+        }
+        input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>Get in Touch</h2>
+        <form action="/thanks" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" required placeholder="John">
+            </div>
+    
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required placeholder="Doe">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" required placeholder="john.doe@example.com">
+            </div>
+    
+            <input type="submit" value="Send Message" />
+        </form>
+    </div>
+
+</body>
+</html>

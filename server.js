@@ -26,7 +26,10 @@ app.get('/sheets-auth', (req, res) => {
     console.log('sheets auth raw request', req);
 
     res.status(200).send("Sheets auth connected to this route");
-});               
+});      
+app.get('/thanks', (req, res) => {
+    res.render('thanks', { contact: { firstName: 'Guest', lastName: '' } });
+});         
 app.post('/thanks', (req, res) => {
     // If modifying these scopes, delete token.json, compared to the quick start example we left off .readonly because we want to write data as well.
     const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
